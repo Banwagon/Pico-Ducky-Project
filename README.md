@@ -1,5 +1,9 @@
 # Pico-Ducky-Project
 
+---------------------------------
+This project was created for educational purposes only.  I hold no responsibility to how it us used outside of this repository.
+---------------------------------
+
 Pico-Ducky "Bad USB" School Project files.  Written with PowerShell and Python.
 
 Step 1: Drag CirciotPython image onto Pico
