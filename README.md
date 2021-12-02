@@ -1,8 +1,9 @@
 # Pico-Ducky-Project
 
 ---------------------------------
-This project was created for educational purposes only.  I hold no responsibility to how it us used outside of this repository.
+This project was created for educational purposes only.  I hold no responsibility to how the code contained within is used outside of this repository.
 ---------------------------------
+
 
 Pico-Ducky "Bad USB" School Project files.  Written with PowerShell and Python.
 
