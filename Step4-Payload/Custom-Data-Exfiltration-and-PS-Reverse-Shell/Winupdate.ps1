@@ -22,6 +22,17 @@ New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender Security Cent
 New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Real-Time Protection" -Name DisableBehaviorMonitoring -Value 1 -PropertyType DWORD -Force
 New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Real-Time Protection" -Name DisableOnAccessProtection -Value 1 -PropertyType DWORD -Force
 New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Real-Time Protection" -Name DisableScanOnRealtimeEnable -Value 1 -PropertyType DWORD -Force
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection"
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Remediation"
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\UX Configuration"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" -Name DisableRealtimeMonitoring -Value 1 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" -Name DisableBehaviorMonitoring -Value 1 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" -Name DisableOnAccessProtection -Value 1 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" -Name DisableScanOnRealtimeEnable -Value 1 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Remediation" -Name LocalSettingOverrideScan_ScheduleTime -Value 1 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Remediation" -Name Scan_ScheduleDay -Value 8 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Remediation" -Name Scan_ScheduleTime -Value 3e7 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\UX Configuration" -Name Notification_Suppress -Value 1 -PropertyType DWORD -Force
 #Removes NT AUTHORITY\SYSTEM's control over Windows Defender's registry keys
 $perfpath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender"
 $system = "NT AUTHORITY\SYSTEM"
